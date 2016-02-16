@@ -1,0 +1,65 @@
+<%= form_for(@gift, :html => {class: "form-horizontal"}) do |f| %>
+  <% if @gift.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gift.errors.count, "error") %> prohibited this gift from being saved:</h2>
+
+      <ul>
+      <% @gift.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, class: "col-sm-2 control-label" %>
+    <%= f.text_field :name, class: "col-sm-8 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :experience, class: "col-sm-2 control-label"  %>
+    <%= f.check_box :experience, class: "col-sm-2 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url, class: "col-sm-2 control-label"  %>
+    <%= f.text_field :url, class: "col-sm-8 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image_url, class: "col-sm-2 control-label"  %>
+    <%= f.text_field :image_url, class: "col-sm-8 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, class: "col-sm-2 control-label"  %>
+    <%= f.text_area :description, class: "col-sm-8 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comment, class: "col-sm-2 control-label"  %>
+    <%= f.text_area :comment, class: "col-sm-8 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :min_price, class: "col-sm-2 control-label"  %>
+    <%= f.text_field :min_price, class: "col-sm-4 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :max_price, class: "col-sm-2 control-label"  %>
+    <%= f.text_field :max_price, class: "col-sm-4 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :shipping_available, class: "col-sm-2 control-label"  %>
+    <%= f.check_box :shipping_available, class: "col-sm-2 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :shipping_price, class: "col-sm-2 control-label"  %>
+    <%= f.text_field :shipping_price, class: "col-sm-4 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :shipping_time, class: "col-sm-2 control-label"  %>
+    <%= f.number_field :shipping_time, class: "col-sm-4 control-label" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :brand, "Brand", class: "col-sm-2 control-label"  %>
+    <%= text_field_tag :brand_id, nil, class: "col-sm-8 control-label" %>
+  </div>
+  <div class="form-group span7 text-center">
+    <%= f.submit class: "btn btn-primary"%>
+  </div>
+<% end %>

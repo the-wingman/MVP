@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  url: MyString
+  image_url: MyString
+  description: MyText
+  comment: MyText
+  min_price: 9.99
+  max_price: 9.99
+  shipping_available: false
+  shipping_price: 9.99
+  shipping_time: 1
+  brand_id: 
+
+two:
+  name: MyString
+  type: 
+  url: MyString
+  image_url: MyString
+  description: MyText
+  comment: MyText
+  min_price: 9.99
+  max_price: 9.99
+  shipping_available: false
+  shipping_price: 9.99
+  shipping_time: 1
+  brand_id: 

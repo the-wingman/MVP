@@ -1,0 +1,10 @@
+# model setup
+
+bin/rails g resource User name email password_digest
+bin/rails g resource Profile name user:references
+bin/rails g resource Brand name url
+bin/rails g resource Gift name type url image_url description:text comment:text min_price:decimal max_price:decimal shipping_available:boolean shipping_price:decimal shipping_time:integer brand:references user:references
+bin/rails g resource Tag name
+bin/rails g resource ProfileTag profile:references tag:references value:float
+bin/rails g resource ProfileTag gift:references tag:references value:float
+bin/rails g migration AddUserRefToGifts user:references

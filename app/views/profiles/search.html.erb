@@ -1,0 +1,17 @@
+<br><br>
+<div class="form">
+	<div class="form-group-row">
+		<% @gifts.each do |gift|%>
+			<div class="col-sm-5">
+				<%= render "gifts/show_search", :gift => gift %>
+			</div>
+		<% end %>
+	</div>
+</div>
+<div class="col-sm-3 col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+    	<% @history.each do |g|%>
+	        <li><%= link_to g.name, gift_path(g) %></li>
+        <% end %>
+    </ul>
+</div>

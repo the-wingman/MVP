@@ -1,0 +1,2 @@
+module GiftTagsHelper
+end

@@ -1,0 +1,15 @@
+<div class="jumbotron" onClick="document.forms['gits_<%= gift.id%>'].submit();" style="cursor: pointer">
+  <%= form_tag({action: 'search_next'},  options={:method=>:post, :name => ('gits_' + gift.id.to_s)}) do %>
+    <img src="http://www.conseilsdefamille.com/wp-content/uploads/2013/03/Cadeau-Fotolia_27171652CMYK_WB.jpg" class="img-rounded" style="width: 200px; height: 200px;">
+    <h2>
+      <%= gift.name %>
+    </h2>
+    <h4>
+      <%= gift.brand.name %>
+    </h4>
+    <h3>
+      <%= gift.min_price.to_i %> €
+    </h3>
+    <%= hidden_field_tag :chosen, gift.id %>
+  <% end %>
+</div>

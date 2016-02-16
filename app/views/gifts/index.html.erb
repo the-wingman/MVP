@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Gifts</h1>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Url</th>
+      <th>Image url</th>
+      <th>Description</th>
+      <th>Comment</th>
+      <th>Min price</th>
+      <th>Max price</th>
+      <th>Shipping available</th>
+      <th>Shipping price</th>
+      <th>Shipping time</th>
+      <th>Brand</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gifts.each do |gift| %>
+      <tr>
+        <td><%= gift.name %></td>
+        <td><%= gift.experience %></td>
+        <td><%= gift.url %></td>
+        <td><%= gift.image_url %></td>
+        <td><%= gift.description %></td>
+        <td><%= gift.comment %></td>
+        <td><%= gift.min_price %></td>
+        <td><%= gift.max_price %></td>
+        <td><%= gift.shipping_available %></td>
+        <td><%= gift.shipping_price %></td>
+        <td><%= gift.shipping_time %></td>
+        <td><%= gift.brand.name %></td>
+        <td><%= gift.user %></td>
+        <td><%= link_to 'Show', gift %></td>
+        <td><%= link_to 'Edit', edit_gift_path(gift) %></td>
+        <td><%= link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gift', new_gift_path %>

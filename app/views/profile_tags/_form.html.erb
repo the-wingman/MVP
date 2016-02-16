@@ -1,0 +1,13 @@
+<div class="form-group">
+	<ul class="list-group col-lg-4 col-lg-offset-2">
+		<% @tags.each do |tag| %>
+			<li class="list-group-item">
+			<div class="checkbox">
+	    		<label>
+	    			<%= check_box_tag ('tags[' + tag.id.to_s + ']') %> <%= tag.name %>
+	        	</label>
+	      	</div>
+	      	</li>
+		<% end %>
+	</ul>
+</div>

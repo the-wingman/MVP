@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gift_id: 
+  tag_id: 
+  value: 1.5
+
+two:
+  gift_id: 
+  tag_id: 
+  value: 1.5
