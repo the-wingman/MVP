@@ -40,11 +40,10 @@ class ProfilesController < ApplicationController
 	end
 
 	def search_next
+		@profile = Profile.find(params[:id])
 		session[:history_all] += session[:current_choice]
 		session[:history_chosen] += [params[:chosen]]
-		session[:current_choice].each do |gift|
-
-		end
+		# INSERT ALGO HERE
 		redirect_to action: :search
 	end
 
