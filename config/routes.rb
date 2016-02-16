@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'give', to: 'gift_proposition#new', as: 'give'
+  post 'gift_propositions/create', to: 'gift_proposition#create'
+
   get 'algo/search'
 
   resources :gifts

@@ -56,7 +56,7 @@ class ProfilesController < ApplicationController
 			INNER JOIN profile_tags ON profile_tags.tag_id = gift_tags.tag_id
 			WHERE profile_tags.profile_id = ? AND gifts.id NOT IN #{get_history_string}
 			GROUP BY gifts.id
-			ORDER BY SUM(profile_tags.value*gift_tags.value)
+			ORDER BY SUM(profile_tags.value*gift_tags.value) DESC
 			LIMIT 2
 			", @profile.id]
 		session[:current_choice] = []
