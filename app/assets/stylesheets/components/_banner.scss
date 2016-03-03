@@ -1,0 +1,38 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  color: white;
+  font-family: "Raleway";
+  font-size: 50px;
+  font-weight: 300;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.banner p {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.banner .btn {
+  margin-left: 10px;
+  padding: 0 30px;
+  border-radius: 0em;
+  line-height: 40px;
+  color: #999999;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.banner .btn:hover {
+  opacity: 1;
+  color: #999999;
+}

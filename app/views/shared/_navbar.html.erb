@@ -1,7 +1,7 @@
 <div class="navbar-new">
   <!-- Logo -->
   <a href="/" class="navbar-new-brand">
-    <img src="assets/logo-titre.png" />
+    <%= image_tag "logo-titre.png" %>
   </a>
 
   <!-- Right Navigation -->
@@ -23,7 +23,7 @@
           <!-- Profile picture and dropdown -->
           <div class="navbar-new-item">
             <div class="dropdown">
-              <img src="assets/profilepic.jpg" class="avatar-large dropdown-toggle" id="navbar-new-menu" data-toggle="dropdown">
+              <%= image_tag "profilepic.jpg", class: "avatar-large dropdown-toggle", id: "navbar-new-menu", data: {toggle: "dropdown"} %>
               <ul class="dropdown-menu dropdown-menu-right navbar-new-dropdown-menu">
                 <li><a href="#">Profile</a></li>
                 <li><%= link_to 'Mes favorites', root_path %></li>
