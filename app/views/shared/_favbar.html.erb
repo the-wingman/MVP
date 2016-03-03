@@ -1,0 +1,66 @@
+<div class="navbar-new">
+  <!-- Logo -->
+  <a href="/" class="navbar-new-brand">
+    <img src="assets/logo-titre.png" />
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-new-right hidden-xs hidden-sm">
+
+    <!-- Search form -->
+    <!-- <form action="" class="navbar-new-search">
+      <input type="text" class="navbar-new-search-input" placeholder="Search something">
+      <button type="submit" class="navbar-new-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </form> -->
+
+    <!-- Text link -->
+
+      <% if current_user %>
+          <%= link_to 'Proposer un cadeau', give_path, class: "navbar-new-item navbar-new-button btn" %>
+
+
+      <% else %>
+          <%= link_to 'Proposer un cadeau', give_path, class: "navbar-new-item navbar-new-button btn" %>
+          <%= link_to 'Connection', login_path, class: "navbar-new-item navbar-new-link" %>
+          <%= link_to 'Inscription', signup_path, class: "navbar-new-item navbar-new-link" %>
+      <% end %>
+
+
+    <!-- Notification link-->
+    <!-- <a href="" class="navbar-new-item navbar-new-link">
+      <div class="badge-container">
+        <i class="fa fa-envelope-o"></i>
+        <div class="badge badge-blue">3</div>
+      </div>
+    </a> -->
+
+    <!-- Profile picture and dropdown -->
+    <div class="navbar-new-item">
+      <div class="dropdown">
+        <img src="assets/profilepic.jpg" class="avatar-large dropdown-toggle" id="navbar-new-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-new-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><%= link_to 'Mes favorites', root_path %></li>
+          <li><%= link_to 'Déconnexion', logout_path %></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Button (call-to-action) -->
+    <!-- <a href="" class="navbar-new-item navbar-new-button btn">Post stuff</a> -->
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-new-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-new-dropdown-menu">
+        <li><a href="#">Some mobile link</a></li>
+        <li><a href="#">Other one</a></li>
+        <li><a href="#">Other one</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
