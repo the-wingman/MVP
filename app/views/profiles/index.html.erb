@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<% if current_user && @profile %>
+<% if current_user && @profiles.first %>
   <table class="table table-responsive">
     <thead>
       <tr>
         <th>Nom</th>
-        <th></th>
+        <th>Tags</th>
       </tr>
     </thead>
 
@@ -13,6 +13,14 @@
       <% @profiles.each do |profile| %>
         <tr>
           <td><%= profile.name %></td>
+          <td>
+            <% profile.get_tags.each do |tag| %>
+              <%= content_tag(:span, class: 'tag' ) do %>
+                <%= tag %>
+              <% end %>
+            <% end %>
+          </td>
+
           <td><%= link_to 'Start research', profile_path(profile) + '/search_init' %></td>
         </tr>
       <% end %>
