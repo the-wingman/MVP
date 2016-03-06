@@ -1,0 +1,16 @@
+td {
+  font-family: Raleway;
+}
+
+#start-search {
+  float: right;
+  border: 2px solid #999999;
+  opacity: 0.6;
+  color: grey !important;
+  padding: 5px;
+}
+
+#start-search:hover {
+  opacity: 1;
+  text-decoration: none;
+}
