@@ -1,14 +1,43 @@
 <br><br>
-<div class="form">
-	<div class="form-group-row">
-		<% @gifts.each do |gift|%>
-			<div class="col-sm-5">
-				<%= render "gifts/show_search", :gift => gift %>
-			</div>
-		<% end %>
-	</div>
+<div class="row">
+  <div class="col-sm-12">
+      <h4 class="text-center">Dis nous ce qu'elle pourrait aimer</h4>
+  </div>
 </div>
-<div class="col-sm-3 col-md-2 sidebar">
+<div class="row">
+  <div class="form">
+  	<div class="form-group-row">
+  		<% @gifts.each do |gift|%>
+  			<div class="col-sm-12 col-md-6">
+  				<%= render "gifts/show_search", :gift => gift %>
+  			</div>
+  		<% end %>
+  	</div>
+  </div>
+</div>
+
+<div class="row">
+  <% if @history.blank? == false %>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="text-center">Ce que tu as deja retenu...</h4>
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <% @history.each do |g|%>
+      <div class="col-lg-2 col-md-3 col-xs-4 thumb gift-card-history" style="background-image: url(http://placeimg.com/400/400/animals);">
+        <span class="gift-card-history-meta">
+          <%= link_to g.name, gift_path(g) %>
+        </span>
+        <!-- <%= link_to image_tag("http://www.magazine-homme.fr/wp-content/uploads/2013/12/cadeau-femme-600x400.jpg", :border => 0, :alt => '', :title => '', :class => 'img-responsive'), gift_path(g) %> -->
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<!-- <div class="col-sm-3 col-md-2 sidebar">
     <ul class="nav nav-sidebar">
     	<% @history.each do |g|%>
 	        <li>
@@ -20,4 +49,4 @@
           </li>
         <% end %>
     </ul>
-</div>
+</div> -->
