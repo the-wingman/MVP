@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216145347) do
+ActiveRecord::Schema.define(version: 20160307214826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160216145347) do
     t.float    "value",      default: 1.0
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "category"
   end
 
   add_index "profile_tags", ["profile_id", "tag_id"], name: "index_profile_tags_on_profile_id_and_tag_id", unique: true, using: :btree

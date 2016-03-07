@@ -4,17 +4,39 @@
         <h4 class="text-center">Dis nous ce qu'elle pourrait aimer</h4>
     </div>
   </div>
-  <div class="row">
-    <div class="form">
-    	<div class="form-group-row">
-    		<% @gifts.each do |gift|%>
-    			<div class="col-sm-12 col-md-6">
-    				<%= render "gifts/show_search", :gift => gift %>
-    			</div>
-    		<% end %>
-    	</div>
-    </div>
+
+<!-- <div class="row">
+  <div class="form">
+  	<div class="form-group-row">
+  		<% @gifts.each do |gift|%>
+  			<div class="col-sm-12 col-md-6">
+  				<%= render "gifts/show_search", :gift => gift %>
+  			</div>
+  		<% end %>
+  	</div>
   </div>
+</div> -->
+
+<div class="row">
+  <div class="form">
+  	<div class="form-group-row">
+  		<div class="col-sm-12 col-md-6">
+  			<%= render "gifts/show_search", :gift => @gifts.first %>
+  		</div>
+      <div class="col-sm-12 col-md-6">
+        <div onClick="document.forms['none'].submit();" >
+          <%= form_tag({action: 'search_next'},  options={:method=>:post, :name => ('none')}) do %>
+            <%= image_tag 'http://cliparts.co/cliparts/8cA/Eeq/8cAEeqMca.png', size: '64'%>
+            <%= hidden_field_tag :chosen, -1 %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <%= render "gifts/show_search", :gift => @gifts.last %>
+      </div>
+  	</div>
+  </div>
+</div>
 
   <div class="row">
     <% if @history.blank? == false %>

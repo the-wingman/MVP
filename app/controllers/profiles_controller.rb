@@ -43,12 +43,22 @@ class ProfilesController < ApplicationController
 		@profile = Profile.find(params[:id])
 		session[:history_all] += session[:current_choice]
 		session[:history_chosen] += [params[:chosen]]
-		# INSERT ALGO HERE
+		session[:current_choice].each do |i|
+			if i.to_i==params[:chosen].to_i
+				op = '+'
+			else
+				op = '-'
+			end
+			ActiveRecord::Base.connection.execute("UPDATE gift_tags
+				SET value = gift_tags.value #{op} profile_tags.value
+				FROM profile_tags
+				WHERE gift_tags.gift_id = #{i} and profile_tags.tag_id = gift_tags.tag_id")
+		end
 		redirect_to action: :search
 	end
 
 	def search
-		@history = Gift.find(session[:history_chosen])
+		@history = Gift.where(id: session[:history_chosen])
 		@profile = Profile.find(params[:id])
 		@gifts = Gift.find_by_sql ["SELECT gifts.* FROM gifts
 			INNER JOIN gift_tags ON gifts.id = gift_tags.gift_id

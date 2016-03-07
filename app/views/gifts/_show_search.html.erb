@@ -1,6 +1,6 @@
 
-<div onClick="document.forms['gits_<%= gift.id%>'].submit();" >
-  <%= form_tag({action: 'search_next'},  options={:method=>:post, :name => ('gits_' + gift.id.to_s)}) do %>
+<div onClick="document.forms['gift_<%= gift.id%>'].submit();" >
+  <%= form_tag({action: 'search_next'},  options={:method=>:post, :name => ('gift_' + gift.id.to_s)}) do %>
     <div class="gift-container">
       <div class="gift-cards">
         <a class="gift-card" href="#">
