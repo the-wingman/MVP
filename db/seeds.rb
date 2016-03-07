@@ -15,7 +15,7 @@ CSV.foreach('db/tags.csv', headers: true) do |row|
 	Tag.create row.to_hash
 end
 
-t = ['name', 'brand_id', 'url', 'min_price', 'max_price', 'shipping_available', 'shipping_price', 'shipping_time', 'experience']
+t = ['name', 'brand_id', 'url', 'image_url', 'min_price', 'max_price', 'shipping_available', 'shipping_price', 'shipping_time', 'experience']
 CSV.foreach('db/gifts.csv', headers: true, col_sep: "\t") do |row|
 	h = {}
 	t.each do |v|
