@@ -1,0 +1,175 @@
+@import "breakpoint";
+
+//Center Content
+.gift-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+//Todo clean up some crappy code
+.gift-cards {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 1.5%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.gift-card-history {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    height: 50px;
+    span {
+      display: block;
+    }
+    .gift-card-history-meta {
+      max-height: 0;
+      overflow: hidden;
+      color: #666;
+      font-size: .78em;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 35%;
+      padding: 0 5%;
+      @include transition-property(max-height);
+      @include transition-duration(.4s);
+      @include transition-timing-function(ease-in-out);
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    &:hover, &:focus {
+      background: white;
+      @include box-shadow(rgba(black, 0.3) 0px 0px 20px 0px);
+      text-decoration: none;
+      .gift-card-history-meta {
+        max-height: 1em;
+      }
+    }
+}
+
+.gift-card {
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  background: #fefff9;
+  color: #363636; //the whole content of the gift-card becomes linked, so this will give the text a "norma;" appearance
+  text-decoration: none;
+  @include box-shadow(rgba(black, 0.19) 0 0 8px 0);
+  // @include border-radius(4px);
+  @include breakpoint(700px, $no-query: true) {
+  //switch to 2 columns
+    max-width: 400px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+  @include breakpoint(980px, $no-query: true) {
+  //switch to 3 columns
+    &:nth-child(even) {
+      margin-right: 20px;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  span {
+    display: block;
+  }
+  .gift-card-summary {
+    padding: 5% 5% 3% 5%;
+  }
+  .gift-card-header {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(white,.15);
+    background-blend-mode: overlay;
+    //@include border-radius(4px 4px 0 0);
+    &:hover, &:focus {
+      background-color: rgba(white, 0);
+    }
+  }
+  .gift-card-title {
+    background: rgba(0, 0, 0, .6);
+    padding: 3.5% 0 2.5% 0;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    h3 {
+      font-family: 'Raleway';
+      font-weight: 200;
+      font-size: 1.2em;
+      line-height: 1.2;
+      padding: 0 3.5%;
+      margin: 0;
+    }
+  }
+  .gift-card-meta {
+    max-height: 0;
+    overflow: hidden;
+    color: #666;
+    font-size: .78em;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5%;
+    padding: 0 5%;
+    @include transition-property(max-height);
+    @include transition-duration(.4s);
+    @include transition-timing-function(ease-in-out);
+  }
+  &:hover, &:focus {
+    background: white;
+    @include box-shadow(rgba(black, 0.3) 0px 0px 20px 0px);
+    text-decoration: none;
+    .gift-card-title {
+      background: rgba(0, 0, 0, .9);
+    }
+    .gift-card-meta {
+      max-height: 1em;
+    }
+  }
+}
+
+img {
+  max-width: 100%; // stop images from breaking out of their bounding boxes.
+}
+
+//General styles for page to make it prettier ;P
+body {
+  background :#f0f0f0;
+  font-size: 17px;
+  line-height: 1.4;
+  font-family: 'Jaldi', sans-serif;
+}
+
+* {
+  @include transition-property(
+    background-color,
+    border-color,
+    box-shadow,
+    color,
+    opacity,
+    text-shadow,
+    transform
+  );
+  @include transition-duration(0.2s);
+  @include transition-timing-function(linear);
+}

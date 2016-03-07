@@ -11,7 +11,13 @@
 <div class="col-sm-3 col-md-2 sidebar">
     <ul class="nav nav-sidebar">
     	<% @history.each do |g|%>
-	        <li><%= link_to g.name, gift_path(g) %></li>
+	        <li>
+            <div class="gift-card-history" style="background-image: url(http://placeimg.com/400/400/animals);">
+                <span class="gift-card-history-meta">
+                  <%= link_to g.name, gift_path(g) %>
+                </span>
+            </div>
+          </li>
         <% end %>
     </ul>
 </div>
