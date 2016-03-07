@@ -1,5 +1,45 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="wrap">
+      <div class="row">
+        <div class="mobile-clear"></div>
+          <div class="show show-third">
+            <img src="<%= @gift.image_url %>" />
+
+            <div class="mask">
+              <!-- <h2><%= @gift.min_price.to_i %>€</h2>
+              <p>A partir de</p> -->
+              <a href="#" class="more">J'achète !</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-6">
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class= "text-center">
+    <%= link_to 'Back', :back %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--
 <p>
   <strong>Name:</strong>
   <%= @gift.name %>
@@ -60,5 +100,5 @@
   <%= @gift.brand.name %>
 </p>
 <p>
+ -->
 
-<%= link_to 'Back', :back %>
