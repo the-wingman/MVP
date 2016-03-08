@@ -1,27 +1,27 @@
-name
-mode
-sport
-cuisine
-deco
-art
-bien_etre
-jeux_videos
-cinema
-activites_manuelles
-photo
-design
-gourmandise
-nouvelles_technos
-sorties
-plaisirs_coquins
-epicurisme
-bobo
-geek
-princesse
-classique
-bonne_vivante
-fashionista
-hippie
-alternative
-alone
-long_distance
+name  category
+mode  2
+sport 2
+cuisine 2
+deco  2
+art 2
+bien etre 2
+jeux videos 2
+cinema  2
+activites manuelles 2
+photo 2
+design  2
+gourmandise 2
+nouvelles technos 2
+sorties 2
+plaisirs coquins  2
+epicurisme  2
+bobo  3
+geek  3
+princesse 3
+classique 3
+bonne vivante 3
+fashionista 3
+hippie  3
+alternative 3
+alone 4
+long_distance 4

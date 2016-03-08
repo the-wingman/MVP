@@ -46,7 +46,7 @@
 
     <div class="media-section">
       <h3><%= @gift.name %></h3>
-      <h4> A partir de <%= @gift.min_price.to_i %> €</h4>
+      <h4 id="#price"> A partir de <%= @gift.min_price.to_i %> €</h4>
       <p><%= @gift.description %></p>
     </div>
     <div class="media-section">
@@ -54,10 +54,12 @@
     </div>
     <div class="media-section">
       <div class="share-links">
-        <a href="#" class="buy-link bg-email">
+        <%= link_to @gift.url, class: "buy-link bg-email", target: "_blank" do %>
+        <!-- <a href="#" class="buy-link bg-email"> -->
           <span>Fais chauffer la CB  </span>
           <p><i class="fa fa-credit-card"></i></p>
-        </a>
+        <% end %>
+<!--         </a> -->
       </div>
     </div>
   </div>

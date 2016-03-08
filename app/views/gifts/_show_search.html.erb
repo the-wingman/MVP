@@ -10,7 +10,10 @@
             </span>
           </span>
           <span class="gift-card-summary">
-            A summary will also be present. Usually two to three brief sentences about the content on the detail page.
+            <%= gift.description[0..100] rescue "Ici devrait apparaitre une petite description sympa du produit ! Pas de panique ça arrive :-)" %>
+            <% if gift.description && gift.description.size > 100 %>
+              <%="..."%>
+            <% end %>
           </span>
           <span class="gift-card-meta">
             By <%= gift.brand.name %>

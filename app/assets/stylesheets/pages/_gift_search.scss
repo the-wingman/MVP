@@ -169,6 +169,25 @@
   }
 }
 
+.info-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-link {
+  flex: 0 0 49%;
+  color: white;
+  font-size: 18px;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #969696;
+  }
+}
+
 img {
   max-width: 100%; // stop images from breaking out of their bounding boxes.
 }

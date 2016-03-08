@@ -22,6 +22,9 @@
 }
 .media-section {
   margin: 40px auto;
+  #price {
+    color: #00738C;
+  }
 }
 .media-section:first-child {
   margin-top: 0;
@@ -55,7 +58,7 @@
   padding: 10px 0;
   text-align: center;
   cursor: pointer;
-  &:hover {
+  &:hover, &:focus {
     color: white;
     text-decoration: none;
     background-color: #969696;
