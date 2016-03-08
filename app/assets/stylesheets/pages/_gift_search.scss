@@ -22,10 +22,9 @@
 
 .gift-card-history {
     position: relative;
-    margin-bottom: 20px;
     padding-bottom: 30px;
     height: 150px;
-    margin: 10px;
+    margin: 20px;
     overflow: hidden;
     /* background-repeat: no-repeat; */
     background-size: cover;
@@ -153,6 +152,17 @@
     .gift-card-meta {
       max-height: 1em;
     }
+  }
+}
+
+#dislike-button {
+  padding-top: 15%;
+}
+
+#dislike-img{
+  opacity: 0.5;
+  &:hover {
+  opacity: 1;
   }
 }
 
