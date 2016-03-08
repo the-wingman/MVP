@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-sm-12 col-md-6">
     <div class="wrap">
       <div class="row">
@@ -9,9 +9,9 @@
             <img src="<%= @gift.image_url %>" />
 
             <div class="mask">
-              <!-- <h2><%= @gift.min_price.to_i %>€</h2>
-              <p>A partir de</p> -->
-              <a href="#" class="more">J'achète !</a>
+              <h2><%= @gift.min_price.to_i %>€</h2>
+              <p>A partir de</p>
+              <a href="<%= @gift.url %>" target="_blank" class="more">J'achète !</a>
             </div>
           </div>
       </div>
@@ -19,14 +19,55 @@
   </div>
 
   <div class="col-sm-12 col-md-6">
-
+    <div class="row">
+      <h2><%= @gift.name %></h2>
+    </div>
   </div>
 
+</div> -->
+
+<div class="media">
+  <div class="media-body">
+    <div class="media-section">
+      <img src="<%= @gift.image_url %>" />
+    </div>
+    <div class="media-section">
+      <div class="share-links">
+        <a href="#" class="share-link bg-facebook">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#" class="share-link bg-email">
+          <i class="fa fa-envelope-o"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="media-aside">
+
+    <div class="media-section">
+      <h3><%= @gift.name %></h3>
+      <h4> A partir de <%= @gift.min_price.to_i %> €</h4>
+      <p><%= @gift.description %></p>
+    </div>
+    <div class="media-section">
+      <h4>127 mecs le recommandent !</h4>
+    </div>
+    <div class="media-section">
+      <div class="share-links">
+        <a href="#" class="buy-link bg-email">
+          <span>Fais chauffer la CB  </span>
+          <p><i class="fa fa-credit-card"></i></p>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
+
+
 <div class="row">
-  <div class= "text-center">
-    <%= link_to 'Back', :back %>
+  <div class= "text-center" id="back-to-search">
+    <%= link_to 'Back', :back, class: "back-button" %>
   </div>
 </div>
 

@@ -2,7 +2,7 @@
 /* -------------------------------------
  * Fonts
  * ------------------------------------- */
-@import url("http://fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url("http://fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Open+Sans:400,300,700|Raleway:100,300,400,700,500");
 /* -------------------------------------
  * Colors
  * ------------------------------------- */
@@ -1837,7 +1837,7 @@ hr {
 /* line 9, /Users/ilias/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_type.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Montserrat", "Raleway", "sans-serif";
+  font-family: "Raleway", "Montserrat", "sans-serif";
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
