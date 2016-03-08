@@ -156,13 +156,16 @@
 }
 
 #dislike-button {
-  padding-top: 15%;
+  @include breakpoint(980px, $no-query: true) {
+    padding-top: 15%;
+  }
 }
 
 #dislike-img{
   opacity: 0.5;
   &:hover {
   opacity: 1;
+  cursor: pointer;
   }
 }
 
